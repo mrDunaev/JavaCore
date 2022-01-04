@@ -8,8 +8,7 @@ public class Words {
     public static void main(String[] args) {
         ArrayList<String> words = new ArrayList<>(Arrays.asList("One","Two","Three","Four","Two","Three","Three","Four","Four","Four"));
 
-        LinkedHashSet<String> uniqueWords = new LinkedHashSet<>();
-        uniqueWords.addAll(words);
+        LinkedHashSet<String> uniqueWords = new LinkedHashSet<>(words);
 
         System.out.println(words);
         System.out.println(uniqueWords);
