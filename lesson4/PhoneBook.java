@@ -17,9 +17,7 @@ public class PhoneBook {
     public String toString() {
         final String[] book = new String[1];
         book[0] = "Телефонная книга:\n";
-        getPhones().forEach((key, value) -> {
-            book[0] += key + " - " + value + "\n";
-        });
+        getPhones().forEach((key, value) -> book[0] += key + " - " + value + "\n");
         return book[0];
     }
 
@@ -29,7 +27,7 @@ public class PhoneBook {
 
     public void get(String surname) {
         getPhones().forEach((key, value) -> {
-           if (value == surname)
+           if (value.equals(surname))
                System.out.println(key + " - " + value);
         });
     }
